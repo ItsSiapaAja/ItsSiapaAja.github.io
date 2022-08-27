@@ -71,6 +71,7 @@ section.aboutme {
     grid-template-columns: 400px 400px;
     justify-content: center;
     padding: 40px 0;
+    offset-anchor: center;
 }
 
 section.aboutme h2 {
@@ -173,16 +174,21 @@ footer {
         align-items: center;
         top: 0;
         left: 0;
+        font-size: 15px;
+        height: 100px;
+        flex-direction: column;
     }
 
     section.jumbotron {
         flex-direction: column;
         padding: 10px 0;
         width: 100%;
+        margin-top: 110px;
     }
 
     section.aboutme {
         grid-template-columns: 150px 150px;
+        scroll-margin-top: 100px;
     }
 
     section.aboutme h2 {
