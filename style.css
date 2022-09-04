@@ -19,21 +19,27 @@ nav {
     left: 0;
 }
 
+nav ul {
+    display: flex;
+}
+
 nav ul li {
     list-style-type: none;
     display: inline;
     margin: 5px;
 }
 
-nav ul li a {
+nav ul li p {
     color: azure;
     text-decoration: none;
     border-bottom: 5px solid rgb(101, 98, 238);
     transition: border-bottom 0.5s;
+    user-select: none;
 }
 
-nav ul li a:hover {
+nav ul li p:hover {
     border-bottom: 5px solid rgb(133, 131, 255);
+    cursor: pointer;
 }
 
 section.jumbotron {
@@ -89,9 +95,9 @@ section.socialmedia {
     width: 100%;
     background-color: rgb(127, 129, 255);
     font-family: Arial, Helvetica, sans-serif;
-    padding: 20px 0;
+    padding: 40px 0;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -100,7 +106,7 @@ section.socialmedia h2 {
     margin: auto;
     text-align: center;
     padding: 10px;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     margin-bottom: 10px;
 }
 
@@ -116,6 +122,29 @@ section.socialmedia div.card {
 
 section.socialmedia img {
     border-radius: 5px;
+}
+
+section.project {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.project div.card {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+figcaption a {
+    color: black;
+    text-decoration: none;
 }
 
 footer {
@@ -203,7 +232,8 @@ footer {
 
     section.socialmedia {
         width: 100%;
-        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
     }
 
     section.socialmedia h2 {
@@ -211,8 +241,9 @@ footer {
     }
 
     section.socialmedia div.card {
-        width: 80px;
+        width: 200px;
         height: 120px;
+        margin: 15px;
     }
 
     section.socialmedia h2 {
@@ -230,5 +261,21 @@ footer {
     section.socialmedia img {
         width: 70px;
         height: 70px;
+    }
+
+    section.project img {
+        width: 100px;
+    }
+
+    section.project h2 {
+        font-size: 20px;
+    }
+
+    section.project h3 {
+        font-size: 13px;
+    }
+
+    section.project figcaption {
+        font-size: 12px;
     }
 }
