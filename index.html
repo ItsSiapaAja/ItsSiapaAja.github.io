@@ -4,73 +4,74 @@
         <title>Randef</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
+        <link href="./build/randD.css" rel="stylesheet">
     </head>
-    <body>
-        <nav>
-            <h1>randef</h1>
-            <ul>
-                <li class="home-link"><p>Home</p></li>
-                <li class="aboutme-link"><p>About</p></li>
-                <li class="socialmedia-link"><p>Social Media</p></li>
-                <li class="project-link"><p>Project</p></li>
+    <body class="font-arial">
+        <nav class="header -h-height-long bg-darkblue -h-fix -fx-column">
+            <h1 class="-h-ll-click">randef</h1>
+            <ul class="list-link">
+                <li class="home-link">Home</li>
+                <li class="aboutme-link">About</li>
+                <li class="socialmedia-link">Social Media</li>
+                <li class="project-link">Project</li>
             </ul>
         </nav>
 
-        <section class="jumbotron">
-            <img src="./img/mewen.webp" alt="foto-propil-discrot" width="200" height="200">
-            <div class="profile">
+        <section class="jumbotron -fx-row margin-top-100 bg-blue min-height-300 -t-center min-width-100per">
+            <img src="./img/mewen.webp" alt="foto-propil-discrot" class="radius-50per border-5-white min-width-180">
+            <div class="flex -fx-align-center -fx-column -f-size-30">
                 <h1>Farand</h1>
-                <p>esempe</p>
+                <p class="-f-size-18">esempe</p>
             </div>
         </section>
 
-        <section class="aboutme" id="aboutme">
-            <h2>About Me</h2>
-            <p>My name is Farand and I'm 13 years old, I live and born in Indonesia and now I school in SMPN 1 Cibadak. I can code with HTML, CSS, JS (little bit), C++ (for some reason), and now I tried to learn Python, Java, and C.</p>
+        <section class="about-section padding-x-50 padding-y-50" id="aboutme">
+            <h1>About Me</h1>
+            <p class="-f-size-13">My name is Farand and I'm 13 years old, I live and born in Indonesia and now I school in SMPN 1 Cibadak. I can code with HTML, CSS, JS (little bit), C++ (for some reason), and I currently learn Python, Java, and C.</p>
             <p>I make this website only for practice my HTML and CSS (I dont really want to do it but this is how I learn XD). I know this website's having a bad UI but yeah I tried, I will update this website every day or even every year.</p>
         </section>
 
-        <section class="socialmedia" id="socialmedia">
+        <section class="section -fx-column bg-blue padding-x-50 padding-y-50 color-white" id="socialmedia">
             <h2>Social Media</h2>
-            <div class="card">
-                <img src="./img/discord.png" alt="discrot" width="100" height="100">
+            <div class="flex -fx-justify-around width-100per -t-center padding-x-10 padding-y-10 color-black">
+                <div class="bg-white padding-x-10 padding-y-10 width-200 border-box margin-bottom-20 radius-20">
+                <img src="./img/discord.png" alt="discrot" class="width-100">
                 <h3>Discord</h3>
                 <figcaption>paran#4130</figcaption>
-            </div>
-            <div class="card">
-                <img src="./img/youtube.png" alt="youtube" width="100" height="100">
-                <h3>YouTube</h3>
-                <figcaption>Faar411</figcaption>
-            </div>
-            <div class="card">
-                <img src="./img/omlet.png" alt="omlet" width="100" height="100">
-                <h3>Omlet Arcade</h3>
-                <figcaption>rand411_</figcaption>
-            </div>
-            <div class="card">
-                <img src="./img/GitHub-Mark-120px-plus.png" alt="GitHub">
-                <h3>GitHub Profile</h3>
-                <figcaption><a href="https://github.com/ItsSiapaAja" target="_blank">ItsSiapaAja</a></figcaption>
+                </div>
+                <div class="bg-white padding-x-10 padding-y-10 width-200 border-box margin-bottom-20 radius-20">
+                    <img src="./img/youtube.png" alt="youtube" class="width-100">
+                    <h3>YouTube</h3>
+                    <figcaption>Faar411</figcaption>
+                </div>
+                <div class="bg-white padding-x-10 padding-y-10 width-200 border-box margin-bottom-20 radius-20">
+                    <img src="./img/omlet.png" alt="omlet" class="width-100">
+                    <h3>Omlet Arcade</h3>
+                    <figcaption>rand411_</figcaption>
+                </div>
+                <div class="bg-white padding-x-10 padding-y-10 width-200 border-box radius-20">
+                    <img src="./img/GitHub-Mark-120px-plus.png" alt="GitHub" class="width-100">
+                    <h3>GitHub Profile</h3>
+                    <figcaption><a href="https://github.com/ItsSiapaAja" target="_blank">ItsSiapaAja</a></figcaption>
+                </div>
             </div>
         </section>
 
-        <section class="project" id="project">
+        <section class="section -fx-column min-height-500 -t-center" id="project">
             <h2>Project</h2>
-            <div class="card">
-                <img src="./img/project-1.png" alt="project-1" width="300">
-                <h3>Teuing</h3>
-                <figcaption><a href="https://github.com/ItsSiapaAja/Teuing" target="_blank">Teuing : Useless project</a></figcaption>
+            <div class="section bg-blue -fx-column color-white height-150 -fx-justify-center radius-10">
+                <h3>RandD Framework</h3>
+                <figcaption><a href="https://github.com/ItsSiapaAja/randd-css-framework" target="_blank">Repo Page</a></figcaption>
             </div>
-            <div class="card">
-                <img src="./img/project-2.png" alt="project-2" width="300">
+            <div class="section bg-blue -fx-column color-white height-150 -fx-justify-center radius-10">
                 <h3>Website IPS Club SMPN 1 Cibadak</h3>
                 <figcaption><a href="https://itssiapaaja.github.io/ssk-smpn1cibadak/" target="_blank">IPS Club</a></figcaption>
             </div>
         </section>
 
-        <footer>@randef 2022</footer>
+        <footer class="footer bg-darkblue color-white padding-y-50 -f-size-15"><p>@randef 2022 || Created with <a href="">randD Framework</a></p></footer>
 
     <script src="./script.js"></script>
+    <script src="./build/grayss.js"></script>
     </body>
 </html>

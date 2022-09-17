@@ -1,14 +1,14 @@
 console.log("Hello World");
 
-let header = 70;
+let header = 100;
 const aboutMe = document.getElementById("aboutme");
 const socialMedia = document.getElementById("socialmedia");
 const project = document.getElementById("project");
 
-const linkHome = document.querySelector("nav ul li.home-link p");
-const linkAboutMe = document.querySelector("nav ul li.aboutme-link p");
-const linkSocialMedia = document.querySelector("nav ul li.socialmedia-link p");
-const linkProject = document.querySelector("nav ul li.project-link p");
+const linkHome = document.querySelector("nav ul li.home-link");
+const linkAboutMe = document.querySelector("nav ul li.aboutme-link");
+const linkSocialMedia = document.querySelector("nav ul li.socialmedia-link");
+const linkProject = document.querySelector("nav ul li.project-link");
 
 linkHome.addEventListener("click", function (e) {
     let offset = 0;
