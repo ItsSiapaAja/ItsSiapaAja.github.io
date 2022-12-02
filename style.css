@@ -96,6 +96,10 @@ section h2 {
 	margin-bottom: 20px;
 }
 
+section p {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 span {
 	background-color: white;
 	border-radius: 5px;
@@ -139,5 +143,9 @@ footer a {
 
 	.jumbotron .content {
 		font-size: 0.8em;
+	}
+
+	.socialmedia #show {
+		align-items: center;
 	}
 }

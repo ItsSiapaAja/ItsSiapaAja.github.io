@@ -47,35 +47,18 @@ function addSphere()
 
 function posSphere()
 {
-    for(let i = 0; i < 70; i++)
-    {
-        sphere[i].position.x += -0.01;
-        sphere[i].rotation.y += 0.01;
-        sphere[i].rotation.x += 0.01;
-    }
+    sphere.forEach((sp) => {
+        sp.position.x += -0.01;
+        sp.rotation.y += 0.01;
+        sp.rotation.x += 0.01;
+    })
 }
 
 addSphere();
 
-// const directionalLightBackUp = new THREE.DirectionalLight(0xffffff, 0.7);
-// directionalLightBackUp.position.set(0, 2, 5);
-// scene.add(directionalLightBackUp);
-
 const directionalLightBack = new THREE.DirectionalLight(0xffffff, 0.7);
 directionalLightBack.position.set(0, 0, 5);
 scene.add(directionalLightBack);
-
-// const directionalLightFrontDown = new THREE.DirectionalLight(0xffffff, 0.7);
-// directionalLightFrontDown.position.set(0, -2, 0);
-// scene.add(directionalLightFrontDown);
-
-// const lightFront = new THREE.PointLight();
-// lightFront.position.set(2, 1, 3);
-// scene.add(lightFront);
-
-// const lightBack = new THREE.PointLight();
-// lightBack.position.set(-2, -1, 7);
-// scene.add(lightBack);
 
 function animate()
 {
@@ -87,3 +70,51 @@ function animate()
 }
 
 animate();
+
+const smLink = document.querySelectorAll(".socialmedia #show");
+
+smLink.forEach((sm) => {
+    sm.addEventListener("click", () => {
+        if(sm.className == "scm dc")
+        {
+            navigator.clipboard.writeText("paran#4130");
+        }
+        else if(sm.className == "scm gh")
+        {
+            location.href = "https://github.com/ItsSiapaAja";
+        }
+        else if(sm.className == "scm yt")
+        {
+            location.href = "https://www.youtube.com/channel/UCC01wjaHIuqkfmYMnz70baw";
+        }
+    });
+});
+
+const navLink = document.querySelectorAll(".jumbotron ul li");
+
+const about = document.querySelector(".about").getBoundingClientRect().top;
+const socialmedia = document.querySelector(".socialmedia").getBoundingClientRect().top;
+
+
+navLink.forEach((nav) => {
+    nav.addEventListener("click", () => {
+        if(nav.className == "about-me")
+        {
+            window.scrollTo({
+                top: about,
+                behavior: "smooth"
+            });
+        }
+        else if(nav.className == "social-media")
+        {
+            window.scrollTo({
+                top: socialmedia,
+                behavior: "smooth"
+            });
+        }
+        else if(nav.className == "home")
+        {
+            location.reload();
+        }
+    });
+});
