@@ -1,77 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Randef</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./build/randD.css" rel="stylesheet">
-    </head>
-    <body class="font-arial">
-        <nav class="header bg-darkblue -h-height-long -h-fix">
-            <h1 class="-h-ll-click">randef</h1>
-            <ul class="list-link bg-darkblue">
-                <li class="home-link">Home</li>
-                <li class="aboutme-link">About</li>
-                <li class="socialmedia-link">Social Media</li>
-                <li class="project-link">Project</li>
-            </ul>
-        </nav>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rand</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="jumbotron">
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About Me</a></li>
+			<li><a href="">Social Media</a></li>
+		</ul>
+		<div class="content">
+			<h1>Paran</h1>
+			<p>My Portfolio Project</p>
+		</div>
+	</div>
+	<section id="black" class="about">
+		<h2>About Me</h2>
+		<p>My name is <span>Farand</span> and I'm from Indonesia, I'm a beginner programmer and currently learn HTML, CSS, JavaScript, C++ and Python.</p>
+		<p>I schooled in SMPN 1 Cibadak, and now I'm <span>14</span> years old.</p>
+	</section>
+	<section class="socialmedia">
+		<h2>Social Media</h2>
+		<div class="scm dc" id="show">
+			<img src="img\discord-logo-png-7625.png" alt="Discord" width="80">
+			<h2>Discord</h2>
+			<p>paran#4130</p>
+		</div>
+		<div class="scm gh" id="show">
+			<img src="img\GitHub-Mark\PNG\GitHub-Mark-64px.png" alt="Github" width="80">
+			<h2>GitHub</h2>
+			<p>ItsSiapaAja</p>
+		</div>
+		<div class="scm yt" id="show">
+			<img src="img\youtube-logo-png-3566.png" alt="YouTube" width="80">
+			<h2>YouTube</h2>
+			<p>rand411</p>
+		</div>
+	</section>
+	<footer>
 
-        <section class="jumbotron -fx-row margin-top-100px bg-blue min-height-300px -t-center min-width-100per">
-            <img src="./img/mewen.webp" alt="foto-propil-discrot" class="round-50per border-5px-white min-width-180px">
-            <div class="flex -fx-align-center -fx-column resp">
-                <h1 class="-f-size-40px">Farand</h1>
-                <p class="-f-size-18px">esempe</p>
-            </div>
-        </section>
+	</footer>
 
-        <section class="about-section padding-x-50px padding-y-50px min-height-250px -fx-justify-evenly" id="aboutme">
-            <h1>About Me</h1>
-            <p>My name is Farand and I'm 13 years old, I live and born in Indonesia and now I school in SMPN 1 Cibadak. I can code with HTML, CSS, JS (little bit), C++ (for some reason), and I currently learn Python, Java, and C.</p>
-            <p>I make this website only for practice my HTML and CSS (I dont really want to do it but this is how I learn XD). I know this website's having a bad UI but yeah I tried, I will update this website every day or even every year.</p>
-        </section>
-
-        <section class="section -fx-column bg-blue padding-x-50px padding-y-50px color-white" id="socialmedia">
-            <h2>Social Media</h2>
-            <div class="flex -fx-justify-around width-100per -t-center padding-x-10px padding-y-10px color-black">
-                <div class="bg-white padding-x-10px padding-y-10px width-200px margin-bottom-20px round-20px">
-                    <img src="./img/discord.png" alt="discrot" class="width-100px">
-                    <h3>Discord</h3>
-                    <figcaption>paran#4130</figcaption>
-                </div>
-                <div class="bg-white padding-x-10px padding-y-10px width-200px margin-bottom-20px round-20px">
-                    <img src="./img/youtube.png" alt="youtube" class="width-100px">
-                    <h3>YouTube</h3>
-                    <figcaption>Faar411</figcaption>
-                </div>
-                <div class="bg-white padding-x-10px padding-y-10px width-200px margin-bottom-20px round-20px">
-                    <img src="./img/omlet.png" alt="omlet" class="width-100px">
-                    <h3>Omlet Arcade</h3>
-                    <figcaption>rand411_</figcaption>
-                </div>
-                <div class="bg-white padding-x-10px padding-y-10px width-200px round-20px">
-                    <img src="./img/GitHub-Mark-120px-plus.png" alt="GitHub" class="width-100px">
-                    <h3>GitHub Profile</h3>
-                    <figcaption><a href="https://github.com/ItsSiapaAja" target="_blank">ItsSiapaAja</a></figcaption>
-                </div>
-            </div>
-        </section>
-
-        <section class="section -fx-column min-height-500px -t-center" id="project">
-            <h2>Project</h2>
-            <div class="section bg-blue -fx-column color-white height-150px -fx-justify-center round-10px">
-                <h3>RandD Framework</h3>
-                <figcaption><a href="https://github.com/ItsSiapaAja/randd-css-framework" target="_blank">Repo Page</a></figcaption>
-            </div>
-            <div class="section bg-blue -fx-column color-white height-150px -fx-justify-center round-10px">
-                <h3>Website IPS Club SMPN 1 Cibadak</h3>
-                <figcaption><a href="https://itssiapaaja.github.io/ssk-smpn1cibadak/" target="_blank">IPS Club</a></figcaption>
-            </div>
-        </section>
-
-        <footer class="footer bg-darkblue color-white padding-y-50px -f-size-15px -t-center"><p>@randef 2022 || Created with <a href="">randD Framework</a></p></footer>
-
-    <script src="./script.js"></script>
-    <script src="./build/randD.js"></script>
-    </body>
+<script src="node_modules\three\build\three.js"></script>
+<script src="script.js"></script>
+</body>
 </html>

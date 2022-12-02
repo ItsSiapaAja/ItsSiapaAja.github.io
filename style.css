@@ -1,281 +1,131 @@
 * {
-    margin: 0;
-    padding: 0;
+	padding: 0;
+	margin: 0;
 }
 
-nav {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(101, 98, 238);
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    color: azure;
-    justify-content: space-around;
-    padding: 5px 0;
-    align-items: center;
-    box-shadow: 0 2px 2px 0.1px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
+body {
+	font-family: arial, verdana, sans-serif;
+	--dark: rgb(10, 10, 10);
+	user-select: none;
 }
 
-nav ul {
-    display: flex;
+a {
+	color: inherit;
+	text-decoration: inherit;
 }
 
-nav ul li {
-    list-style-type: none;
-    display: inline;
-    margin: 5px;
+#black {
+	background-color: var(--dark);
+	color: white;
 }
 
-nav ul li p {
-    color: azure;
-    text-decoration: none;
-    border-bottom: 5px solid rgb(101, 98, 238);
-    transition: border-bottom 0.5s;
-    user-select: none;
+.dc {
+	background-color: rgb(56, 102, 255);
 }
 
-nav ul li p:hover {
-    border-bottom: 5px solid rgb(133, 131, 255);
-    cursor: pointer;
+.gh {
+	background-color: rgb(71, 71, 71);
 }
 
-section.jumbotron {
-    background-color: rgb(127, 129, 255);
-    max-width: 100%;
-    height: 300px;
-    margin: 60px 0 0 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.yt {
+	background-color: rgb(255, 49, 49);
 }
 
-section.jumbotron h1 {
-    font-size: 40px;
-    text-shadow: 1px 1px 6px black;
+.jumbotron {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 3;
+	position: relative;
+	color: white;
 }
 
-section.jumbotron p {
-    font-size: 20px;
-    text-shadow: 1px 1px 6px black;
+.jumbotron ul {
+	display: flex;
+	list-style: none;
+	align-self: flex-end;
+	background-color: rgba(255, 255, 255, .2);
+	color: white;
+	padding: 10px;
+	font-weight: 500;
+	border-radius: 50px;
 }
 
-section.jumbotron img {
-    border-radius: 50%;
-    border: 5px solid aliceblue;
-    box-shadow: 1px 1px 5px black;
+.jumbotron ul li {
+	margin-inline: 10px;
+	text-decoration: none;
+	transition: 0.2s;
 }
 
-section.aboutme {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-columns: 400px 400px;
-    justify-content: center;
-    padding: 40px 0;
-    offset-anchor: center;
+.jumbotron ul li:hover {
+	color: gray;
 }
 
-section.aboutme h2 {
-    grid-column: 1 / 3;
-    text-align: center;
-    margin-bottom: 8px;
+.jumbotron canvas {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: -1;
 }
 
-section.aboutme p {
-    font-size: 15px;
-    margin: 0 10px 0 0;
+.jumbotron .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding-inline: 45px;
+}
+
+.content h1 {
+	font-size: 5em;
+}
+
+.content p {
+	font-size: 1.4em;
+}
+
+section {
+	padding: 50px;
+}
+
+section h2 {
+	margin-bottom: 20px;
+}
+
+span {
+	background-color: white;
+	border-radius: 5px;
 }
 
 section.socialmedia {
-    width: 100%;
-    background-color: rgb(127, 129, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 40px 0;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    align-items: center;
-    justify-content: space-evenly;
+	background-color: rgb(0, 0, 0);
+	color: rgb(231, 231, 231);
 }
 
-section.socialmedia h2 {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    grid-column: 1 / 5;
-    margin-bottom: 10px;
+.socialmedia .scm {
+	display: none;
+	padding: 60px;
+	margin-bottom: 20px;
 }
 
-section.socialmedia div.card {
-    width: 150px;
-    height: 200px;
-    background-color: azure;
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    border-radius: 10px;
-    text-align: center;
+.socialmedia #show {
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
 }
 
-section.socialmedia img {
-    border-radius: 5px;
-}
+@media only screen and (max-width: 375px) {
+	.jumbotron ul {
+		align-self: center;
+		font-size: 0.9em;
+	}
 
-section.project {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section.project div.card {
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    border-radius: 10px;
-    width: 60%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-figcaption a {
-    color: black;
-    text-decoration: none;
-}
-
-footer {
-    background-color: rgb(101, 98, 238);
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    color: azure;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-@media only screen and (max-width: 938px) {
-    nav {
-        align-items: center;
-        top: 0;
-        left: 0;
-    }
-
-    section.jumbotron {
-        flex-direction: column;
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    section.aboutme {
-        grid-template-columns: 200px 200px;
-    }
-
-    section.aboutme h2 {
-        font-size: 20px;
-    }
-
-    section.aboutme p {
-        font-size: 13px;
-    }
-
-    section.socialmedia {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    nav {
-        align-items: center;
-        top: 0;
-        left: 0;
-    }
-
-    section.socialmedia {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    nav {
-        align-items: center;
-        top: 0;
-        left: 0;
-        font-size: 15px;
-        height: 100px;
-        flex-direction: column;
-    }
-
-    section.jumbotron {
-        flex-direction: column;
-        padding: 10px 0;
-        width: 100%;
-        margin-top: 110px;
-    }
-
-    section.aboutme {
-        grid-template-columns: 150px 150px;
-        scroll-margin-top: 100px;
-    }
-
-    section.aboutme h2 {
-        font-size: 20px;
-    }
-
-    section.aboutme p {
-        font-size: 13px;
-        grid-column: 1 / 3;
-        margin-top: 8px;
-    }
-
-    section.socialmedia {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    section.socialmedia h2 {
-        margin: auto;
-    }
-
-    section.socialmedia div.card {
-        width: 200px;
-        height: 120px;
-        margin: 15px;
-    }
-
-    section.socialmedia h2 {
-        font-size: 20px;
-    }
-
-    section.socialmedia h3 {
-        font-size: 13px;
-    }
-
-    section.socialmedia figcaption {
-        font-size: 12px;
-    }
-
-    section.socialmedia img {
-        width: 70px;
-        height: 70px;
-    }
-
-    section.project img {
-        width: 100px;
-    }
-
-    section.project h2 {
-        font-size: 20px;
-    }
-
-    section.project h3 {
-        font-size: 13px;
-    }
-
-    section.project figcaption {
-        font-size: 12px;
-    }
+	.jumbotron .content {
+		font-size: 0.8em;
+	}
 }
