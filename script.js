@@ -13,7 +13,6 @@ jumbotron.appendChild(renderer.domElement);
 
 const sphere = new SphereBackground(scene);
 const plane = new TerrainBackground(scene, "../img/height.png");
-const torus = new TorusBackground(scene);
 
 const next = document.querySelector(".jumbotron .wrap #right");
 const previous = document.querySelector(".jumbotron .wrap #left");
@@ -21,44 +20,29 @@ const previous = document.querySelector(".jumbotron .wrap #left");
 function ChangeBackground()
 {
     let background = 1;
-    let range = 3;
+    let range = 2;
     this.display = () => {
         if(background == 1)
         {
-            camera.position.y = 0;
-            camera.position.z = 10;
-            torus.addTorus();
-            sphere.removeSphere();
-            plane.removeTerrain();
-        }
-        else if(background == 2)
-        {
-            camera.position.y = 0;
             camera.position.z = 150;
             sphere.addSphere();
             plane.removeTerrain();
-            torus.removeTorus();
         }
-        else if(background == 3)
+        else if(background == 2)
         {
             camera.position.y = -10;
             camera.position.z = 0;
             sphere.removeSphere();
             plane.addTerrain();
-            torus.removeTorus();
         }
     };
 
     this.animate = () => {
         if(background == 1)
         {
-            torus.doAnimateRotating();
-        }
-        else if(background == 2)
-        {
             sphere.doAnimate();
         }
-        else if(background == 3)
+        else if(background == 2)
         {
             plane.doAnimate();
         }
