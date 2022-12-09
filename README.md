@@ -11,8 +11,8 @@ Website portfolio saya. Hanya untuk ngetes, belajar, dan melatih kemampuan saya.
 - Menambahkan README.
 
 ## TODO
-- [] Adding less than 5 3d backgrounds
-- [] "Currently learn" section
-- [] Navigation
+- [ ] Adding less than 5 3d backgrounds
+- [ ] "Currently learn" section
+- [ ] Navigation
 - [x] About Me
 - [x] Social Media card
