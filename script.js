@@ -4,71 +4,57 @@ let jumbotronH = jumbotron.getBoundingClientRect().height;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, jumbotronW / jumbotronH, 0.1, 1000);
+camera.position.z = 150;
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(jumbotronW, jumbotronH);
 jumbotron.appendChild(renderer.domElement);
 
-// Begin here ////////////////////////////////
+const sphere = [];
+const redSphereG = new THREE.SphereGeometry(7);
+const redSphereM = new THREE.MeshLambertMaterial({color: 0xff0000, wireframe: true});
 
-const sphere = new SphereBackground(scene);
-const plane = new TerrainBackground(scene, "../img/height.png");
+const greenSphereG = new THREE.SphereGeometry(7);
+const greenSphereM = new THREE.MeshLambertMaterial({color: 0x00ff00, wireframe: true});
 
-const next = document.querySelector(".jumbotron .wrap #right");
-const previous = document.querySelector(".jumbotron .wrap #left");
+const blueSphereG = new THREE.SphereGeometry(7);
+const blueSphereM = new THREE.MeshLambertMaterial({color: 0x0000ff, wireframe: true});
 
-function ChangeBackground()
+function addSphere()
 {
-    let background = 1;
-    let range = 2;
-    this.display = () => {
-        if(background == 1)
+    for(let i = 0; i < 70; i++)
+    {
+        let randomChoice = Math.round(Math.random() * (3 - 0) + 0);
+        if(randomChoice == 1 || randomChoice == 0)
         {
-            camera.position.z = 150;
-            sphere.addSphere();
-            plane.removeTerrain();
+            sphere[i] = new THREE.Mesh(redSphereG, redSphereM);
         }
-        else if(background == 2)
+        else if(randomChoice == 2)
         {
-            camera.position.y = -10;
-            camera.position.z = 0;
-            sphere.removeSphere();
-            plane.addTerrain();
+            sphere[i] = new THREE.Mesh(greenSphereG, greenSphereM);
         }
-    };
+        else if(randomChoice == 3)
+        {
+            sphere[i] = new THREE.Mesh(blueSphereG, blueSphereM);
+        }
 
-    this.animate = () => {
-        if(background == 1)
-        {
-            sphere.doAnimate();
-        }
-        else if(background == 2)
-        {
-            plane.doAnimate();
-        }
-    }
-
-    this.click = () => {
-        next.addEventListener("click", () => {
-            previous.classList.add("show");
-            background++;
-            if(background == range) next.classList.remove("show");
-            this.display();
-        });
-        previous.addEventListener("click", () => {
-            next.classList.add("show");
-            background--;
-            if(background == 1) previous.classList.remove("show");
-            this.display();
-        });
+        sphere[i].position.x = (Math.random() - 0.5) * 400;
+        sphere[i].position.y = (Math.random() - 0.5) * 300;
+        sphere[i].position.z = (Math.random() - 0.5) * 100;
+        scene.add(sphere[i]);
     }
 }
 
-const bg = new ChangeBackground();
-bg.click();
-bg.display();
+function posSphere()
+{
+    sphere.forEach((sp) => {
+        sp.position.x += -0.01;
+        sp.rotation.y += 0.01;
+        sp.rotation.x += 0.01;
+    })
+}
 
-/////////////////////////////////////////////
+addSphere();
 
 const directionalLightBack = new THREE.DirectionalLight(0xffffff, 0.7);
 directionalLightBack.position.set(0, 0, 5);
@@ -78,10 +64,57 @@ function animate()
 {
     requestAnimationFrame(animate);
 
-    // Animate
-    bg.animate();
+    posSphere();
 
     renderer.render(scene, camera);
 }
 
 animate();
+
+const smLink = document.querySelectorAll(".socialmedia #show");
+
+smLink.forEach((sm) => {
+    sm.addEventListener("click", () => {
+        if(sm.className == "scm dc")
+        {
+            navigator.clipboard.writeText("paran#4130");
+        }
+        else if(sm.className == "scm gh")
+        {
+            location.href = "https://github.com/ItsSiapaAja";
+        }
+        else if(sm.className == "scm yt")
+        {
+            location.href = "https://www.youtube.com/channel/UCC01wjaHIuqkfmYMnz70baw";
+        }
+    });
+});
+
+const navLink = document.querySelectorAll(".jumbotron ul li");
+
+const about = document.querySelector(".about").getBoundingClientRect().top;
+const socialmedia = document.querySelector(".socialmedia").getBoundingClientRect().top;
+
+
+navLink.forEach((nav) => {
+    nav.addEventListener("click", () => {
+        if(nav.className == "about-me")
+        {
+            window.scrollTo({
+                top: about,
+                behavior: "smooth"
+            });
+        }
+        else if(nav.className == "social-media")
+        {
+            window.scrollTo({
+                top: socialmedia,
+                behavior: "smooth"
+            });
+        }
+        else if(nav.className == "home")
+        {
+            location.reload();
+        }
+    });
+});
