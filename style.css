@@ -88,21 +88,30 @@ a {
 	width: 100%;
 	align-content: center;
 	justify-content: space-between;
+	position: relative;
 }
 
 .jumbotron span {
+	position: absolute;
+	top: 38%;
 	background-color: rgba(255, 255, 255, .2);
 	border-radius: 5px;
-	height: 100px;
+	height: 150px;
 	text-align: center;
-	line-height: 100px;
+	line-height: 150px;
 	width: 30px;
 	font-weight: 600;
 	opacity: 0;
+	display: none;
+}
+
+.jumbotron span:last-child {
+	right: 0;
 }
 
 .jumbotron .show {
 	opacity: 1;
+	display: block;
 }
 
 .content h1 {
@@ -115,6 +124,9 @@ a {
 
 section {
 	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 section h2 {
@@ -123,6 +135,12 @@ section h2 {
 
 section p {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1em;
+}
+
+.about p {
+	width: 80%;
+	text-align: center;
 }
 
 section span {
@@ -139,6 +157,7 @@ section.socialmedia {
 	display: none;
 	padding: 60px;
 	margin-bottom: 20px;
+	width: 70%;
 }
 
 .socialmedia #show {
@@ -172,5 +191,11 @@ footer a {
 
 	.socialmedia #show {
 		align-items: center;
+	}
+
+	.about p {
+		width: 95%;
+		text-align: center;
+		font-size: 0.8em;
 	}
 }

@@ -27,7 +27,7 @@ function SphereBackground(scene)
                 sphere[i] = new THREE.Mesh(blueSphereG, blueSphereM);
             }
 
-            sphere[i].position.x = (Math.random() - 0.5) * 400;
+            sphere[i].position.x = (Math.random() - 0.5) * 300;
             sphere[i].position.y = (Math.random() - 0.5) * 300;
             sphere[i].position.z = (Math.random() - 0.5) * 100;
             scene.add(sphere[i]);

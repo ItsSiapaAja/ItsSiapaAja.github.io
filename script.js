@@ -3,7 +3,7 @@ let jumbotronW = jumbotron.getBoundingClientRect().width;
 let jumbotronH = jumbotron.getBoundingClientRect().height;
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(60, jumbotronW / jumbotronH, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(70, jumbotronW / jumbotronH, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(jumbotronW, jumbotronH);
@@ -13,26 +13,44 @@ jumbotron.appendChild(renderer.domElement);
 
 const sphere = new SphereBackground(scene);
 const plane = new TerrainBackground(scene, "../img/height.png");
+const torus = new TorusNormalBackground(scene);
 
 const next = document.querySelector(".jumbotron .wrap #right");
 const previous = document.querySelector(".jumbotron .wrap #left");
-
+ 
 function ChangeBackground()
 {
     let background = 1;
-    let range = 2;
+    let range = 3;
     this.display = () => {
         if(background == 1)
         {
-            camera.position.z = 150;
-            sphere.addSphere();
+            camera.position.z = 10;
+            camera.position.y = 0;
+
+            sphere.removeSphere();
             plane.removeTerrain();
+
+            torus.addTorus();
         }
         else if(background == 2)
         {
+            camera.position.y = 0;
+            camera.position.z = 150;
+
+            plane.removeTerrain();
+            torus.removeTorus();
+
+            sphere.addSphere();
+        }
+        else if(background == 3)
+        {
             camera.position.y = -10;
             camera.position.z = 0;
+
             sphere.removeSphere();
+            torus.removeTorus();
+
             plane.addTerrain();
         }
     };
@@ -40,9 +58,13 @@ function ChangeBackground()
     this.animate = () => {
         if(background == 1)
         {
-            sphere.doAnimate();
+            torus.doAnimate();
         }
         else if(background == 2)
+        {
+            sphere.doAnimate();
+        }
+        else if(background == 3)
         {
             plane.doAnimate();
         }
@@ -82,6 +104,7 @@ function animate()
     bg.animate();
 
     renderer.render(scene, camera);
+    camera.updateProjectionMatrix();
 }
 
 animate();
