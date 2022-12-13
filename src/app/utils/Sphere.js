@@ -1,4 +1,6 @@
-function SphereBackground(scene)
+const THREE = require("./three");
+
+module.exports = function SphereBackground(scene)
 {
     const sphere = [];
     const redSphereG = new THREE.SphereGeometry(7);

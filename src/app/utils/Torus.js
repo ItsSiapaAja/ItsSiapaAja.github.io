@@ -1,4 +1,6 @@
-function TorusNormalBackground(scene) {
+const THREE = require("./three");
+
+module.exports = function TorusNormalBackground(scene) {
     const torusG = new THREE.TorusGeometry(7, 4, 30, 79);
     const torusM = new THREE.MeshNormalMaterial({wireframe: true});
 

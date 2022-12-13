@@ -6,9 +6,7 @@ Website portfolio saya. Hanya untuk ngetes, belajar, dan melatih kemampuan saya.
 - Memperbaiki tombol next dan previous pada jumbotron.
 
 ## Update
-- Memperbaiki font pada section About Me.
-- Memindahkan file utility ke folder `utils`.
-- Menambahkan README.
+- Menggunakan webpack untuk membundle JavaScript
 
 ## TODO
 - [ ] Adding less than 5 3d backgrounds

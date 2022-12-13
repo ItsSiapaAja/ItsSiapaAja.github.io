@@ -1,3 +1,10 @@
+const SphereBackground = require("./utils/Sphere");
+const TerrainBackground = require("./utils/Terrain");
+const TorusNormalBackground = require("./utils/Torus");
+const SocialMedia = require("./utils/SocialMedia");
+const Navigator = require("./utils/Navigator");
+const THREE = require("./utils/three");
+
 const jumbotron = document.querySelector(".jumbotron");
 let jumbotronW = jumbotron.getBoundingClientRect().width;
 let jumbotronH = jumbotron.getBoundingClientRect().height;
@@ -108,3 +115,6 @@ function animate()
 }
 
 animate();
+
+SocialMedia();
+Navigator();

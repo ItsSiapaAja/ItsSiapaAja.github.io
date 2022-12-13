@@ -1,4 +1,6 @@
-function TerrainBackground(scene, dir)
+const THREE = require("./three");
+
+module.exports = function TerrainBackground(scene, dir)
 {
     this.height = new THREE.TextureLoader().load(dir);
 
