@@ -80,8 +80,9 @@ section p {
 }
 
 section span {
-	background-color: white;
 	border-radius: 5px;
+	color: azure;
+	padding: 5px;
 }
 
 header {

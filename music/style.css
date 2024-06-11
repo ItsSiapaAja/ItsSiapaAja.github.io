@@ -1,3 +1,7 @@
+section.track {
+    gap: 10px;
+}
+
 section.track .album {
     display: grid;
     grid-template-areas: 'img sides . .' '. sides . .';
@@ -6,6 +10,10 @@ section.track .album {
     border-radius: 20px;
     box-sizing: border-box;
     align-items: center;
+}
+
+section.track p {
+    margin-block: 10px;
 }
 
 .album img {
@@ -98,5 +106,9 @@ audio {
 
     li {
         font-size: 14px;
+    }
+
+    section p {
+        font-size: 0.8em;
     }
 }

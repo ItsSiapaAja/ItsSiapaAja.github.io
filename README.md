@@ -2,6 +2,7 @@
 Website portfolio saya. Hanya untuk ngetes, belajar, dan melatih kemampuan saya.
 
 ## Bug Fix
+- Fix track that won't play
 
 ## Update
 - Including my albums that uploaded on Bandcamp (and bonus track)
