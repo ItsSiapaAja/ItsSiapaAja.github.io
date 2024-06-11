@@ -2,28 +2,31 @@ const navLink = document.querySelectorAll(".jumbotron ul li");
 
 const about = document.querySelector(".about").getBoundingClientRect().top;
 const socialmedia = document.querySelector(".socialmedia").getBoundingClientRect().top;
+const music = document.querySelector(".music").getBoundingClientRect().top;
+
+let link = 0;
 
 module.exports = function startN() {
     navLink.forEach((nav) => {
         nav.addEventListener("click", () => {
             if(nav.className == "about-me")
             {
-                window.scrollTo({
-                    top: about,
-                    behavior: "smooth"
-                });
+                link = about;
             }
             else if(nav.className == "social-media")
             {
-                window.scrollTo({
-                    top: socialmedia,
-                    behavior: "smooth"
-                });
+                link = socialmedia;
             }
-            else if(nav.className == "home")
+            else if(nav.className == "music-album")
             {
-                location.reload();
+                link = music;
             }
+
+            window.scrollTo({
+                top: link,
+                left: 0,
+                behavior: "smooth"
+            });
         });
     });
 }

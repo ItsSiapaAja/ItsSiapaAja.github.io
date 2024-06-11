@@ -1,36 +1,3 @@
-* {
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	font-family: arial, verdana, sans-serif;
-	--dark: rgb(10, 10, 10);
-	user-select: none;
-}
-
-a {
-	color: inherit;
-	text-decoration: inherit;
-}
-
-#black {
-	background-color: var(--dark);
-	color: white;
-}
-
-.dc {
-	background-color: rgb(56, 102, 255);
-}
-
-.gh {
-	background-color: rgb(71, 71, 71);
-}
-
-.yt {
-	background-color: rgb(255, 49, 49);
-}
-
 .jumbotron {
 	width: 100%;
 	height: 100vh;
@@ -42,17 +9,6 @@ a {
 	color: white;
 }
 
-.jumbotron ul {
-	display: flex;
-	list-style: none;
-	align-self: flex-end;
-	background-color: rgba(255, 255, 255, .2);
-	color: white;
-	padding: 10px;
-	font-weight: 500;
-	border-radius: 50px;
-}
-
 .jumbotron ul li {
 	margin-inline: 10px;
 	text-decoration: none;
@@ -61,6 +17,7 @@ a {
 
 .jumbotron ul li:hover {
 	color: gray;
+	cursor: pointer;
 }
 
 .jumbotron canvas {
@@ -94,7 +51,6 @@ a {
 .jumbotron span {
 	position: absolute;
 	top: 38%;
-	background-color: rgba(255, 255, 255, .2);
 	border-radius: 5px;
 	height: 150px;
 	text-align: center;
@@ -122,30 +78,9 @@ a {
 	font-size: 1.4em;
 }
 
-section {
-	padding: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-section h2 {
-	margin-bottom: 20px;
-}
-
-section p {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 1em;
-}
-
 .about p {
 	width: 80%;
 	text-align: center;
-}
-
-section span {
-	background-color: white;
-	border-radius: 5px;
 }
 
 section.socialmedia {
@@ -153,33 +88,75 @@ section.socialmedia {
 	color: rgb(231, 231, 231);
 }
 
-.socialmedia .scm {
+section.music {
+	background-color: rgb(0, 0, 0);
+	color: rgb(231, 231, 231);
+	border-bottom: 5px dotted wheat;
+}
+
+section.music .albums {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 15px;
+}
+
+.scm {
 	display: none;
 	padding: 60px;
 	margin-bottom: 20px;
 	width: 70%;
 }
 
-.socialmedia #show {
+#socialmedia {
 	display: flex;
 	flex-direction: column;
 	border-radius: 20px;
 }
 
-footer {
-	padding: 50px;
+#album {
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	align-items: center;
+	justify-content: space-around;
+	width: 200px;
+}
+
+#album .listen {
+	grid-area: listen;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 200px;
+}
+
+.listen .button {
+	margin: auto;
+	box-sizing: border-box;
+	width: 100%;
+	transition: 0.2s;
+}
+
+.listen .button:hover {
+	color: gray;
+	cursor: pointer;
+	background-color: azure;
+}
+
+#album h3 {
+	margin-block: 10px;
 	text-align: center;
 }
 
-footer p:first-child {
-	color: cornflowerblue;
+#album img {
+	border-radius: 14px;
+	grid-area: img;
 }
 
-footer a {
-	color: cornflowerblue;
-}
-
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 435px) {
 	.jumbotron ul {
 		align-self: center;
 		font-size: 0.9em;
@@ -189,8 +166,22 @@ footer a {
 		font-size: 0.8em;
 	}
 
-	.socialmedia #show {
+	.socialmedia #socialmedia {
 		align-items: center;
+	}
+
+	.music #album {
+		grid-template-areas: 'img' 'listen';
+		align-items: center;
+		justify-content: center;
+	}
+
+	section.music .albums {
+		flex-direction: column;
+	}
+
+	#album {
+		width: 150px;
 	}
 
 	.about p {

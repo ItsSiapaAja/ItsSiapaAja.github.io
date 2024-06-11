@@ -1,4 +1,4 @@
-const smLink = document.querySelectorAll(".socialmedia #show");
+const smLink = document.querySelectorAll(".socialmedia #socialmedia");
 
 module.exports = function startSM() {
     smLink.forEach((sm) => {
@@ -14,6 +14,10 @@ module.exports = function startSM() {
             else if(sm.className == "scm yt")
             {
                 location.href = "https://www.youtube.com/channel/UCC01wjaHIuqkfmYMnz70baw";
+            }
+            else if(sm.className == "scm ig")
+            {
+                location.href = "https://www.instagram.com/randranran_/";
             }
         });
     });

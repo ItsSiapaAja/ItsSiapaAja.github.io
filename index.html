@@ -5,12 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rand</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="global.css">
 </head>
 <body>
 	<div class="jumbotron">
-		<ul>
-			<li class="home">Home</li>
+		<ul class="button">
 			<li class="about-me">About Me</li>
+			<li class="music-album">Music</li>
 			<li class="social-media">Social Media</li>
 		</ul>
 		<div class="wrap">
@@ -24,30 +25,61 @@
 	</div>
 	<section id="black" class="about">
 		<h2>About Me</h2>
-		<p>My name is <span>Farand</span> and I'm from Indonesia, I'm a beginner programmer and currently learn HTML, CSS, JavaScript, C++ and Python. I schooled in SMPN 1 Cibadak, and now I'm <span>14</span> years old.</p>
+		<p>My name is Farand and I'm from Indonesia, I'm a beginner programmer and currently learn HTML, CSS, JavaScript, C++ and Python. Now I'm a High School student and I hope I can be accepted at the school I want.</p>
+	</section>
+	<section class="music">
+		<h2>Check out the song I made!</h2>
+		<div class="albums">
+			<div class="scm album yellow-in" id="album">
+				<img src="img/instrumentality.jpg" alt="Instrumentality" width="200">
+				<div class="listen">
+					<h3>Instrumentality (Human Being)</h3>
+					<span class="button"><a href="./music/index.html">Listen >></a></span>
+				</div>
+			</div>
+			<div class="scm album white-pre" id="album">
+				<img src="img/precious time.jpg" alt="Precious Time" width="200">
+				<div class="listen">
+					<h3>Precious Time</h3>
+					<span class="button"><a href="./music/index.html">Listen >></a></span>
+				</div>
+			</div>
+			<div class="scm album blue-par" id="album">
+				<img src="img/paranoid.jpg" alt="Paranoid" width="200">
+				<div class="listen">
+					<h3>Paranoid (Shiny Clouds)</h3>
+					<span class="button"><a href="./music/index.html">Listen >></a></span>
+				</div>
+			</div>
+		</div>
 	</section>
 	<section class="socialmedia">
 		<h2>Social Media</h2>
-		<div class="scm dc" id="show">
-			<img src="img/discord-logo-png-7625.png" alt="Discord" width="80">
-			<h3>Discord</h3>
-			<p>paran#4130</p>
+		<div class="scm ig" id="socialmedia">
+			<img src="img/icons8-instagram-96.png" alt="Instagram" width="80">
+			<h3>Instagram</h3>
+			<p>randranran_</p>
 		</div>
-		<div class="scm gh" id="show">
-			<img src="img/GitHub-Mark/PNG/GitHub-Mark-64px.png" alt="Github" width="80">
-			<h3>GitHub</h3>
-			<p>ItsSiapaAja</p>
-		</div>
-		<div class="scm yt" id="show">
+		<div class="scm yt" id="socialmedia">
 			<img src="img/youtube-logo-png-3566.png" alt="YouTube" width="80">
 			<h3>YouTube</h3>
 			<p>rand411</p>
 		</div>
+		<div class="scm dc" id="socialmedia">
+			<img src="img/discord-logo-png-7625.png" alt="Discord" width="80">
+			<h3>Discord</h3>
+			<p>paran#4130</p>
+		</div>
+		<div class="scm gh" id="socialmedia">
+			<img src="img/GitHub-Mark/PNG/GitHub-Mark-64px.png" alt="Github" width="80">
+			<h3>GitHub</h3>
+			<p>ItsSiapaAja</p>
+		</div>
 	</section>
 	<footer id="black">
-		<p>@ItsSiapaAja 2022</p>
+		<p>@ItsSiapaAja 2024</p>
 		<p>Using three.js as 3d framework</p>
-		<p>I didn't own any of these icon, every icon i've got from <a href="https://www.freeiconspng.com/">freeiconspng.com</a> and for the GitHub icon <a href="https://github.com/logos">github.com/logos</a></p>
+		<p>I didn't own any of these icon, every icon i've got from <a href="https://www.freeiconspng.com/">freeiconspng.com</a>, <a href="https://icons8.com/">icons8.com</a>, and for the GitHub icon <a href="https://github.com/logos">github.com/logos</a></p>
 	</footer>
 
 	<script src="./dist/main.js"></script>

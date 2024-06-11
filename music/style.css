@@ -1,0 +1,102 @@
+section.track .album {
+    display: grid;
+    grid-template-areas: 'img sides . .' '. sides . .';
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.album img {
+    grid-area: img;
+    border-radius: 10px;
+}
+
+.album h2 {
+    grid-area: title;
+}
+
+.album .tracks {
+    grid-area: sides;
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'title title';
+}
+
+.album .tracks h3 {
+    margin-block: 2px;
+    text-align: left;
+}
+
+.album .tracks ul {
+    margin-inline-start: 40px;
+    list-style: decimal;
+    margin-block-end: 20px;
+}
+
+.album .tracks li {
+    margin-block: 5px;
+}
+
+.album .tracks li:hover {
+    color: darkgrey;
+    cursor: pointer;
+}
+
+audio {
+    margin-block: 20px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 820px) {
+    .album img {
+        width: 70%;
+        margin-block: 20px;
+    }
+
+    section.track .album {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .album img {
+        width: 70%;
+        margin-block: 20px;
+    }
+
+    .album .tracks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.track .album {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
