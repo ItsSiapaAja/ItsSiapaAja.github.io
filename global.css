@@ -44,6 +44,14 @@ a {
 	background-color: rgb(48, 143, 167);
 }
 
+.blue-hec {
+	background-color: rgb(27, 94, 105);
+}
+
+.pink-ap {
+	background-color: rgb(112, 41, 160);
+}
+
 .white-pre {
 	background-color: rgb(139, 142, 143);
 }
@@ -60,6 +68,13 @@ a {
 	grid-area: 'listen';
 	border: 1px white solid;
 	justify-content: center;
+	transition: color 0.5s, background-color 0.5s;
+}
+
+.listen .button:hover {
+	color: gray;
+	cursor: pointer;
+	background-color: azure;
 }
 
 section {

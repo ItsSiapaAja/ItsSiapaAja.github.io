@@ -1,5 +1,5 @@
 .jumbotron {
-	width: 100%;
+	width: 100wh;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -78,6 +78,11 @@
 	font-size: 1.4em;
 }
 
+.about {
+	top: 0;
+	position: relative;
+}
+
 .about p {
 	width: 80%;
 	text-align: center;
@@ -95,8 +100,9 @@ section.music {
 }
 
 section.music .albums {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: baseline;
 	justify-content: space-around;
 	gap: 15px;
 }
@@ -123,6 +129,10 @@ section.music .albums {
 	width: 200px;
 }
 
+#album.scm {
+	height: 300px;
+}
+
 #album .listen {
 	grid-area: listen;
 	display: flex;
@@ -140,12 +150,6 @@ section.music .albums {
 	transition: 0.2s;
 }
 
-.listen .button:hover {
-	color: gray;
-	cursor: pointer;
-	background-color: azure;
-}
-
 #album h3 {
 	margin-block: 10px;
 	text-align: center;
@@ -156,7 +160,7 @@ section.music .albums {
 	grid-area: img;
 }
 
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
 	.jumbotron ul {
 		align-self: center;
 		font-size: 0.9em;
@@ -177,11 +181,30 @@ section.music .albums {
 	}
 
 	section.music .albums {
-		flex-direction: column;
+		gap: 0 150px;
 	}
 
 	#album {
-		width: 150px;
+		width: 30px;
+		height: 200px;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	#album.scm {
+		padding: 0;
+		height: 200px;
+	}
+
+	#album img {
+		width: 80px;
+	}
+
+	.listen .button {
+		border: 0px;
+		background-color: rgba(0, 0, 0, 0);
+		font-size: 1em;
+		width: 100px;
+		align-items: end;
 	}
 
 	.about p {
