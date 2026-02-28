@@ -1,12 +1,12 @@
 const navLink = document.querySelectorAll(".jumbotron ul li");
 
-const about = document.querySelector(".about").getBoundingClientRect().top;
-const socialmedia = document.querySelector(".socialmedia").getBoundingClientRect().top;
-const music = document.querySelector(".music").getBoundingClientRect().top;
-
 let link = 0;
 
 module.exports = function startN() {
+    const about = document.querySelector(".about").getBoundingClientRect().top;
+    const socialmedia = document.querySelector(".socialmedia").getBoundingClientRect().top;
+    const music = document.querySelector(".music").getBoundingClientRect().top;
+
     navLink.forEach((nav) => {
         nav.addEventListener("click", () => {
             if(nav.className == "about-me")
@@ -22,6 +22,7 @@ module.exports = function startN() {
                 link = music;
             }
 
+            console.log(link);
             window.scrollTo({
                 top: link,
                 left: 0,

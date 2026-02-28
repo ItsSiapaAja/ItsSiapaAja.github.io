@@ -19,7 +19,7 @@ jumbotron.appendChild(renderer.domElement);
 // Begin here ////////////////////////////////
 
 const sphere = new SphereBackground(scene);
-const plane = new TerrainBackground(scene, "../img/height.png");
+const plane = new TerrainBackground(scene, "././img/height.png");
 const torus = new TorusNormalBackground(scene);
 
 const next = document.querySelector(".jumbotron .wrap #right");

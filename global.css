@@ -60,6 +60,10 @@ a {
 	background-color: rgb(139, 142, 143);
 }
 
+.white-hit {
+	background-color: rgb(172, 172, 172);
+}
+
 .button {
 	display: flex;
 	list-style: none;

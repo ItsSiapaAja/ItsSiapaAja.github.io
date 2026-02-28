@@ -6,15 +6,15 @@
 .jumbotron {
     height: 90vh;
     padding: 50px;
-    color: rgb(10, 10, 10);
-    background-color: rgb(10, 10, 10);
+    color: white;
+    background-color: var(--dark);
 }
 
 .jumbotron .content {
     position: absolute;
     z-index: 2;
     top: 60vh;
-    left: 10vw;
+    left: 15vw;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -22,10 +22,16 @@
     width: 70%;
 }
 
+.jumbotron h1 {
+    background-color: var(--dark);
+    padding: 10px;
+}
+
 .content .button {
     width: fit-content;
-    border-color: rgb(10, 10, 10);
-    color: var(--dark);
+    border-color: var(--dark);
+    color: white;
+    background-color: var(--dark);
 }
 
 .jumbotron img {
@@ -136,6 +142,10 @@ audio {
         padding: 30px;
     }
 
+    .jumbotron img {
+        object-position: 50%;
+    }
+
     section.track .album {
         gap: 5px;
     }
@@ -155,6 +165,18 @@ audio {
 }
 
 @media only screen and (max-width: 420px) {
+    .jumbotron .content {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jumbotron .button {
+        align-self: center;
+
+    }
+    
     h1 {
         font-size: 24px;
     }
