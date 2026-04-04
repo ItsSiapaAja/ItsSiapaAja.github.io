@@ -64,12 +64,18 @@ a {
 	background-color: rgb(172, 172, 172);
 }
 
+.black-mm {
+	background-color: rgb(53, 53, 53);
+}
+
 .button {
+	position: fixed;
+	z-index: 999;
 	display: flex;
 	list-style: none;
-	align-self: flex-end;
 	background-color: rgba(255, 255, 255, .2);
 	color: white;
+	align-self: flex-end;
 	padding: 10px;
 	font-weight: 500;
 	border-radius: 50px;
@@ -77,12 +83,6 @@ a {
 	border: 1px white solid;
 	justify-content: center;
 	transition: color 0.5s, background-color 0.5s;
-}
-
-.listen .button:hover {
-	color: gray;
-	cursor: pointer;
-	background-color: azure;
 }
 
 section {
